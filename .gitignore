@@ -1,0 +1,89 @@
+# 🔒 Security - Never commit these files
+*.json
+!mcp_config.json
+!package.json
+!requirements.json
+mcp1-467108-702d9a41627c.json
+*service-account*.json
+*credentials*.json
+*key*.json
+
+# 🔐 Environment and Configuration
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# 📋 Processing Logs and Data
+processed_files.json
+processed_datasets/
+*.log
+logs/
+
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 🧪 Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.pytest_cache/
+cover/
+
+# 📝 Documentation builds
+docs/_build/
+.readthedocs.yml
+
+# 💻 IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 🖥️ OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 🔧 Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 📦 Node modules (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

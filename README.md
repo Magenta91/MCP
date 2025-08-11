@@ -1,2 +1,244 @@
-# MCP
-# MCP Dataset Onboarding Server  A FastAPI-based MCP (Model-Compatible Protocol) server for automating dataset onboarding using Google Drive as both input source and mock catalog.  ## Features  - **Automated Dataset Processing**: Complete workflow from raw CSV/Excel files to cataloged datasets - **Google Drive Integration**: Uses Google Drive folders as input source and catalog storage - **Metadata Extraction**: Automatically extracts column information, data types, and basic statistics - **Data Quality Rules**: Suggests DQ rules based on data characteristics - **Contract Generation**: Creates Excel contracts with schema and DQ information - **Mock Catalog**: Publishes processed artifacts to a catalog folder  ## Project Structure  ``` ├── main.py                    # FastAPI server and endpoints ├── utils.py                   # Google Drive helpers and DQ functions ├── dataset_processor.py       # Centralized dataset processing logic ├── local_test.py             # Local processing script ├── dataset_manager.py        # CLI tool for managing datasets ├── auto_processor.py         # 🤖 Automated file monitoring ├── start_auto_processor.py   # 🚀 Easy startup for auto-processor ├── processor_dashboard.py    # 📊 Monitoring dashboard ├── auto_config.py           # ⚙️ Configuration management ├── requirements.txt          # Python dependencies ├── Dockerfile               # Container configuration ├── .env.template            # Environment variables template ├── processed_files.json     # 📋 Auto-processor tracking log ├── processed_datasets/      # Organized output folder │   └── [dataset_name]/      # Individual dataset folders │       ├── [dataset].csv    # Original dataset │       ├── [dataset]_metadata.json │       ├── [dataset]_contract.xlsx │       ├── [dataset]_dq_report.json │       └── README.md        # Dataset summary └── README.md               # This file ```  ## Setup  ### 1. Google Drive Setup  1. Create a Google Cloud Project and enable the Google Drive API 2. Create a Service Account and download the JSON key file 3. Create two Google Drive folders:    - `MCP_server`: For input CSV/Excel files    - `MCP_client`: For processed artifacts (mock catalog) 4. Share both folders with your service account email (give Editor permissions) 5. Note the folder IDs from the URLs  ### 2. Environment Configuration  1. Copy `.env.template` to `.env`:    ```bash    cp .env.template .env    ```  2. Update the `.env` file with your values:    ```env    GOOGLE_SERVICE_ACCOUNT_KEY_PATH=path/to/your/service-account-key.json    MCP_SERVER_FOLDER_ID=your_mcp_server_folder_id_here    MCP_CLIENT_FOLDER_ID=your_mcp_client_folder_id_here    HOST=0.0.0.0    PORT=8000    ```  ### 3. Installation  #### Local Development ```bash # Install dependencies pip install -r requirements.txt  # Run the server python main.py  # Or process datasets locally python local_test.py ```  #### Dataset Management CLI ```bash # List all processed datasets python dataset_manager.py list  # Process a new dataset python dataset_manager.py process YOUR_FILE_ID  # Show dataset information python dataset_manager.py info DATASET_NAME  # Clean all processed datasets python dataset_manager.py clean ```  ### 🤖 Automated Processing (NEW!) ```bash # Start automatic file monitoring (recommended) python start_auto_processor.py  # Run single check for new files python auto_processor.py --once  # List all auto-processed files python auto_processor.py --list  # Monitor with custom interval (seconds) python auto_processor.py --interval 60  # View processing dashboard python processor_dashboard.py  # Live monitoring dashboard python processor_dashboard.py --live  # Detailed statistics python processor_dashboard.py --stats ```  #### Docker ```bash # Build the image docker build -t mcp-dataset-server .  # Run the container docker run -p 8000:8000 \   -v /path/to/your/service-account-key.json:/app/keys/service-account.json \   -e GOOGLE_SERVICE_ACCOUNT_KEY_PATH=/app/keys/service-account.json \   -e MCP_SERVER_FOLDER_ID=your_server_folder_id \   -e MCP_CLIENT_FOLDER_ID=your_client_folder_id \   mcp-dataset-server ```  ## API Endpoints  ### Core Tools  #### 1. Extract Metadata ```http POST /tool/extract_metadata Content-Type: application/json  {   "file_id": "google_drive_file_id" } ```  #### 2. Apply DQ Rules ```http POST /tool/apply_dq_rules Content-Type: application/json  {   "metadata": { ... } } ```  #### 3. Update Contract ```http POST /tool/update_contract Content-Type: application/json  {   "metadata": { ... },   "dq_rules": [ ... ] } ```  #### 4. Publish to Catalog ```http POST /tool/publish_to_catalog Content-Type: application/json  {   "metadata": { ... },   "contract_file_id": "file_id",   "dq_report": { ... } } ```  #### 5. List Catalog ```http GET /tool/list_catalog ```  ### Workflow Endpoint  #### Process Dataset (Complete Workflow) ```http POST /process_dataset Content-Type: application/json  {   "file_id": "google_drive_file_id" } ```  This endpoint runs the complete workflow: 1. Downloads CSV/Excel from `MCP_server` 2. Extracts metadata 3. Applies DQ rules 4. Creates contract.xlsx 5. Uploads all artifacts to `MCP_client`  ### Utility Endpoints  - `GET /`: Server information and available endpoints - `GET /health`: Health check with Google Drive connectivity test  ## Usage Example  1. **Upload a CSV/Excel file** to your `MCP_server` Google Drive folder 2. **Get the file ID** from the Google Drive URL 3. **Process the dataset**:    ```bash    curl -X POST "http://localhost:8000/process_dataset" \      -H "Content-Type: application/json" \      -d '{"file_id": "your_file_id_here"}'    ``` 4. **Check the catalog**:    ```bash    curl "http://localhost:8000/tool/list_catalog"    ```  ## Generated Artifacts  For each processed dataset, the following files are created in `MCP_client`:  - `{filename}_metadata.json`: Column information, data types, statistics - `{filename}_contract.xlsx`: Excel file with schema and DQ rules - `{filename}_dq_report.json`: Data quality assessment report  ## Data Quality Rules  The system automatically suggests these DQ rules:  - **Not Null**: For columns with <10% null values - **Uniqueness**: For columns with >95% unique values   - **Range Validation**: For numeric columns with min/max bounds  ## Error Handling  All endpoints include comprehensive error handling with descriptive messages. Check the response status and error details for troubleshooting.  ## Development  ### Adding New DQ Rules  Extend the `suggest_dq_rules()` function in `utils.py`:  ```python def suggest_dq_rules(metadata: Dict[str, Any]) -> List[Dict[str, Any]]:     # Add your custom DQ rule logic here     pass ```  ### Adding New Endpoints  Add new endpoints in `main.py` following the existing pattern with proper error handling and Pydantic models.  ## License  MIT License ## 🤖 * *Automated Processing (NEW!)**  ### **Set It and Forget It** The auto-processor monitors your Google Drive folder and automatically processes new files as soon as they're uploaded - no manual intervention required!  ### **How It Works** 1. **Continuous Monitoring**: Watches your `MCP_server` Google Drive folder every 30 seconds 2. **Smart Detection**: Only processes supported files (CSV, Excel) that haven't been processed before 3. **Automatic Processing**: Runs the complete pipeline automatically 4. **Organized Storage**: Saves all artifacts in organized folders 5. **Progress Tracking**: Maintains a log of all processed files  ### **Quick Start** ```bash # Start the auto-processor (easiest way) python start_auto_processor.py  # That's it! Now just upload files to your Google Drive folder # and they'll be processed automatically ```  ### **Features** - ✅ **Zero Manual Work**: Upload files and walk away - ✅ **Smart File Detection**: Ignores duplicates and unsupported formats - ✅ **Real-time Dashboard**: Monitor processing status - ✅ **Error Recovery**: Handles failures gracefully - ✅ **Detailed Logging**: Track all processing activity - ✅ **Configurable**: Adjust check intervals and settings  ### **Monitoring** ```bash # View current status python processor_dashboard.py  # Live monitoring with auto-refresh python processor_dashboard.py --live  # Detailed statistics and analytics python processor_dashboard.py --stats ```  ## 🎯 **Usage Scenarios**  ### **Scenario 1: Fully Automated (Recommended)** 1. Start the auto-processor: `python start_auto_processor.py` 2. Upload CSV/Excel files to your `MCP_server` Google Drive folder 3. Files are automatically processed within 30 seconds 4. Check results in `processed_datasets/` folder 5. Monitor progress with the dashboard  ### **Scenario 2: Manual Processing** 1. Upload file to Google Drive and get file ID 2. Run: `python dataset_manager.py process YOUR_FILE_ID` 3. Check results in organized folders  ### **Scenario 3: API Integration** 1. Start server: `python main.py` 2. Use REST API endpoints for programmatic access 3. Integrate with your existing data pipelines
+# 🤖 MCP Dataset Onboarding Server
+
+A FastAPI-based MCP (Model-Compatible Protocol) server for automating dataset onboarding using Google Drive as both input source and mock catalog.
+
+## 🔒 **SECURITY FIRST - READ THIS BEFORE SETUP**
+
+⚠️ **This repository contains template files only. You MUST configure your own credentials before use.**
+
+📖 **Read [SECURITY_SETUP.md](SECURITY_SETUP.md) for complete security instructions.**
+
+🚨 **Never commit service account keys or real folder IDs to version control!**
+
+## Features
+
+- **Automated Dataset Processing**: Complete workflow from raw CSV/Excel files to cataloged datasets
+- **Google Drive Integration**: Uses Google Drive folders as input source and catalog storage
+- **Metadata Extraction**: Automatically extracts column information, data types, and basic statistics
+- **Data Quality Rules**: Suggests DQ rules based on data characteristics
+- **Contract Generation**: Creates Excel contracts with schema and DQ information
+- **Mock Catalog**: Publishes processed artifacts to a catalog folder
+- **🤖 Automated Processing**: Watches folders and processes files automatically
+- **🌐 Multiple Interfaces**: FastAPI server, MCP server, CLI tools, and dashboards
+
+## Project Structure
+
+```
+├── main.py                    # FastAPI server and endpoints
+├── mcp_server.py             # True MCP protocol server for LLM integration
+├── utils.py                   # Google Drive helpers and DQ functions
+├── dataset_processor.py       # Centralized dataset processing logic
+├── auto_processor.py         # 🤖 Automated file monitoring
+├── start_auto_processor.py   # 🚀 Easy startup for auto-processor
+├── processor_dashboard.py    # 📊 Monitoring dashboard
+├── dataset_manager.py        # CLI tool for managing datasets
+├── local_test.py             # Local processing script
+├── auto_config.py           # ⚙️ Configuration management
+├── requirements.txt          # Python dependencies
+├── Dockerfile               # Container configuration
+├── .env.template            # Environment variables template
+├── .gitignore               # Security: excludes sensitive files
+├── SECURITY_SETUP.md        # 🔒 Security configuration guide
+├── processed_datasets/      # Organized output folder
+│   └── [dataset_name]/      # Individual dataset folders
+│       ├── [dataset].csv    # Original dataset
+│       ├── [dataset]_metadata.json
+│       ├── [dataset]_contract.xlsx
+│       ├── [dataset]_dq_report.json
+│       └── README.md        # Dataset summary
+└── README.md               # This file
+```
+
+## 🚀 Quick Start
+
+### 1. Security Setup (REQUIRED)
+
+```bash
+# 1. Read the security guide
+cat SECURITY_SETUP.md
+
+# 2. Set up your Google service account (outside this repo)
+# 3. Configure your environment variables
+cp .env.template .env
+# Edit .env with your actual values
+
+# 4. Verify no sensitive files will be committed
+git status
+```
+
+### 2. Installation
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Test the setup
+python local_test.py
+```
+
+### 3. Choose Your Interface
+
+#### 🤖 Fully Automated (Recommended)
+```bash
+# Start auto-processor - upload files and walk away!
+python start_auto_processor.py
+```
+
+#### 🌐 API Server
+```bash
+# Start FastAPI server
+python main.py
+```
+
+#### 🧠 LLM Integration (MCP)
+```bash
+# Start MCP server for Claude Desktop, etc.
+python mcp_server.py
+```
+
+#### 🖥️ Command Line
+```bash
+# Manual dataset management
+python dataset_manager.py list
+python dataset_manager.py process YOUR_FILE_ID
+```
+
+## 🎯 Usage Scenarios
+
+### Scenario 1: Set-and-Forget Automation
+1. `python start_auto_processor.py`
+2. Upload files to Google Drive
+3. Files processed automatically within 30 seconds
+4. Monitor with `python processor_dashboard.py --live`
+
+### Scenario 2: LLM-Powered Data Analysis
+1. Configure MCP server in Claude Desktop
+2. Chat: "Analyze the dataset I just uploaded"
+3. Claude uses MCP tools to process and explain your data
+
+### Scenario 3: API Integration
+1. `python main.py`
+2. Integrate with your data pipelines via REST API
+3. Programmatic dataset onboarding
+
+## 📊 What You Get
+
+For each processed dataset:
+- **📄 Original File**: Preserved in organized folder
+- **📋 Metadata JSON**: Column info, types, statistics
+- **📊 Excel Contract**: Professional multi-sheet contract
+- **🔍 Quality Report**: Data quality assessment
+- **📖 README**: Human-readable summary
+
+## 🛠️ Available Tools
+
+### FastAPI Endpoints
+- `/tool/extract_metadata` - Analyze dataset structure
+- `/tool/apply_dq_rules` - Generate quality rules
+- `/process_dataset` - Complete workflow
+- `/health` - System health check
+
+### MCP Tools (for LLMs)
+- `extract_dataset_metadata` - Dataset analysis
+- `generate_data_quality_rules` - Quality assessment
+- `process_complete_dataset` - Full pipeline
+- `list_catalog_files` - Catalog browsing
+
+### CLI Commands
+- `dataset_manager.py list` - Show processed datasets
+- `auto_processor.py --once` - Single check cycle
+- `processor_dashboard.py --live` - Real-time monitoring
+
+## 🔧 Configuration
+
+### Environment Variables (.env)
+```env
+GOOGLE_SERVICE_ACCOUNT_KEY_PATH=path/to/your/key.json
+MCP_SERVER_FOLDER_ID=your_input_folder_id
+MCP_CLIENT_FOLDER_ID=your_output_folder_id
+```
+
+### Auto-Processor Settings (auto_config.py)
+- Check interval: 30 seconds
+- Supported formats: CSV, Excel
+- File age threshold: 1 minute
+- Max files per cycle: 5
+
+## 📈 Monitoring & Analytics
+
+```bash
+# Current status
+python processor_dashboard.py
+
+# Live monitoring (auto-refresh)
+python processor_dashboard.py --live
+
+# Detailed statistics
+python processor_dashboard.py --stats
+
+# Processing history
+python auto_processor.py --list
+```
+
+## 🐳 Docker Deployment
+
+```bash
+# Build
+docker build -t mcp-dataset-server .
+
+# Run (mount your service account key securely)
+docker run -p 8000:8000 \
+  -v /secure/path/to/key.json:/app/keys/key.json \
+  -e GOOGLE_SERVICE_ACCOUNT_KEY_PATH=/app/keys/key.json \
+  -e MCP_SERVER_FOLDER_ID=your_folder_id \
+  mcp-dataset-server
+```
+
+## 🔍 Troubleshooting
+
+### Common Issues
+- **No files detected**: Check Google Drive permissions
+- **Processing errors**: Verify service account access
+- **MCP not working**: Check Claude Desktop configuration
+
+### Debug Commands
+```bash
+# Test Google Drive connection
+python -c "from utils import get_drive_service; print('✅ Connected')"
+
+# Check auto-processor status
+python auto_processor.py --once
+
+# Verify MCP server
+python test_mcp_server.py
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. **Never commit sensitive data**
+4. Test your changes
+5. Submit a pull request
+
+## 📚 Documentation
+
+- [SECURITY_SETUP.md](SECURITY_SETUP.md) - Security configuration
+- [AUTOMATION_GUIDE.md](AUTOMATION_GUIDE.md) - Automation features
+- [MCP_INTEGRATION_GUIDE.md](MCP_INTEGRATION_GUIDE.md) - LLM integration
+
+## 📄 License
+
+MIT License
+
+## 🎉 What Makes This Special
+
+- **🔒 Security First**: Proper credential management
+- **🤖 True Automation**: Zero manual intervention
+- **🧠 LLM Integration**: Natural language data processing
+- **📊 Professional Output**: Enterprise-ready documentation
+- **🔧 Multiple Interfaces**: API, CLI, MCP, Dashboard
+- **📈 Real-time Monitoring**: Live processing status
+- **🗂️ Perfect Organization**: Structured output folders
+
+Transform your messy data files into professional, documented, quality-checked datasets automatically! 🚀

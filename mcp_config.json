@@ -5,9 +5,9 @@
       "args": ["mcp_server.py"],
       "cwd": ".",
       "env": {
-        "GOOGLE_SERVICE_ACCOUNT_KEY_PATH": "mcp1-467108-702d9a41627c.json",
-        "MCP_SERVER_FOLDER_ID": "1roPPn6-sQHKyQDw8rVkmnlTyao3KZSBQ",
-        "MCP_CLIENT_FOLDER_ID": "1lJ5OKMqbSKuz_7aAAjcWSKyxPb-yMvXP"
+        "GOOGLE_SERVICE_ACCOUNT_KEY_PATH": "path/to/your/service-account-key.json",
+        "MCP_SERVER_FOLDER_ID": "your_mcp_server_folder_id_here",
+        "MCP_CLIENT_FOLDER_ID": "your_mcp_client_folder_id_here"
       }
     }
   }
