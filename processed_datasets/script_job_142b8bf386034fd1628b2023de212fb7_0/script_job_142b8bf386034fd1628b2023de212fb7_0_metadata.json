@@ -1,0 +1,74 @@
+{
+  "filename": "script_job_142b8bf386034fd1628b2023de212fb7_0.csv",
+  "row_count": 1,
+  "column_count": 6,
+  "columns": [
+    {
+      "name": "mean_absolute_error",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.4940700979929911,
+      "max_value": 0.4940700979929911,
+      "mean_value": 0.4940700979929911,
+      "std_value": NaN
+    },
+    {
+      "name": "mean_squared_error",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 17.782610464656457,
+      "max_value": 17.782610464656457,
+      "mean_value": 17.782610464656457,
+      "std_value": NaN
+    },
+    {
+      "name": "mean_squared_log_error",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.0859107107687808,
+      "max_value": 0.0859107107687808,
+      "mean_value": 0.0859107107687808,
+      "std_value": NaN
+    },
+    {
+      "name": "median_absolute_error",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.1742337942123413,
+      "max_value": 0.1742337942123413,
+      "mean_value": 0.1742337942123413,
+      "std_value": NaN
+    },
+    {
+      "name": "r2_score",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.0091867740833386,
+      "max_value": 0.0091867740833386,
+      "mean_value": 0.0091867740833386,
+      "std_value": NaN
+    },
+    {
+      "name": "explained_variance",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.0181301156989388,
+      "max_value": 0.0181301156989388,
+      "mean_value": 0.0181301156989388,
+      "std_value": NaN
+    }
+  ],
+  "summary_stats": {}
+}

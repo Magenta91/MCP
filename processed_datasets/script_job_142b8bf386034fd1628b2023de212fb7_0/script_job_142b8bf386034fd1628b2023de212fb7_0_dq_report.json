@@ -1,0 +1,172 @@
+{
+  "dataset_info": {
+    "filename": "script_job_142b8bf386034fd1628b2023de212fb7_0.csv",
+    "row_count": 1,
+    "column_count": 6
+  },
+  "data_quality_summary": {
+    "total_rules": 18,
+    "error_rules": 6,
+    "warning_rules": 12
+  },
+  "column_quality": [
+    {
+      "column_name": "mean_absolute_error",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "mean_squared_error",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "mean_squared_log_error",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "median_absolute_error",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "r2_score",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "explained_variance",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    }
+  ],
+  "suggested_rules": [
+    {
+      "column": "mean_absolute_error",
+      "rule_type": "not_null",
+      "description": "Column 'mean_absolute_error' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "mean_absolute_error",
+      "rule_type": "unique",
+      "description": "Column 'mean_absolute_error' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "mean_absolute_error",
+      "rule_type": "range",
+      "description": "Column 'mean_absolute_error' values should be between 0.4940700979929911 and 0.4940700979929911",
+      "min_value": 0.4940700979929911,
+      "max_value": 0.4940700979929911,
+      "severity": "warning"
+    },
+    {
+      "column": "mean_squared_error",
+      "rule_type": "not_null",
+      "description": "Column 'mean_squared_error' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "mean_squared_error",
+      "rule_type": "unique",
+      "description": "Column 'mean_squared_error' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "mean_squared_error",
+      "rule_type": "range",
+      "description": "Column 'mean_squared_error' values should be between 17.782610464656457 and 17.782610464656457",
+      "min_value": 17.782610464656457,
+      "max_value": 17.782610464656457,
+      "severity": "warning"
+    },
+    {
+      "column": "mean_squared_log_error",
+      "rule_type": "not_null",
+      "description": "Column 'mean_squared_log_error' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "mean_squared_log_error",
+      "rule_type": "unique",
+      "description": "Column 'mean_squared_log_error' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "mean_squared_log_error",
+      "rule_type": "range",
+      "description": "Column 'mean_squared_log_error' values should be between 0.0859107107687808 and 0.0859107107687808",
+      "min_value": 0.0859107107687808,
+      "max_value": 0.0859107107687808,
+      "severity": "warning"
+    },
+    {
+      "column": "median_absolute_error",
+      "rule_type": "not_null",
+      "description": "Column 'median_absolute_error' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "median_absolute_error",
+      "rule_type": "unique",
+      "description": "Column 'median_absolute_error' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "median_absolute_error",
+      "rule_type": "range",
+      "description": "Column 'median_absolute_error' values should be between 0.1742337942123413 and 0.1742337942123413",
+      "min_value": 0.1742337942123413,
+      "max_value": 0.1742337942123413,
+      "severity": "warning"
+    },
+    {
+      "column": "r2_score",
+      "rule_type": "not_null",
+      "description": "Column 'r2_score' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "r2_score",
+      "rule_type": "unique",
+      "description": "Column 'r2_score' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "r2_score",
+      "rule_type": "range",
+      "description": "Column 'r2_score' values should be between 0.0091867740833386 and 0.0091867740833386",
+      "min_value": 0.0091867740833386,
+      "max_value": 0.0091867740833386,
+      "severity": "warning"
+    },
+    {
+      "column": "explained_variance",
+      "rule_type": "not_null",
+      "description": "Column 'explained_variance' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "explained_variance",
+      "rule_type": "unique",
+      "description": "Column 'explained_variance' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "explained_variance",
+      "rule_type": "range",
+      "description": "Column 'explained_variance' values should be between 0.0181301156989388 and 0.0181301156989388",
+      "min_value": 0.0181301156989388,
+      "max_value": 0.0181301156989388,
+      "severity": "warning"
+    }
+  ]
+}

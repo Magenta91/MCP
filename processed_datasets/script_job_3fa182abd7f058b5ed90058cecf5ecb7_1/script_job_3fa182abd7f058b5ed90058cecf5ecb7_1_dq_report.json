@@ -1,0 +1,172 @@
+{
+  "dataset_info": {
+    "filename": "script_job_3fa182abd7f058b5ed90058cecf5ecb7_1.csv",
+    "row_count": 1,
+    "column_count": 6
+  },
+  "data_quality_summary": {
+    "total_rules": 18,
+    "error_rules": 6,
+    "warning_rules": 12
+  },
+  "column_quality": [
+    {
+      "column_name": "precision",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "recall",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "accuracy",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "f1_score",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "log_loss",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "roc_auc",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    }
+  ],
+  "suggested_rules": [
+    {
+      "column": "precision",
+      "rule_type": "not_null",
+      "description": "Column 'precision' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "precision",
+      "rule_type": "unique",
+      "description": "Column 'precision' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "precision",
+      "rule_type": "range",
+      "description": "Column 'precision' values should be between 0.6706848862094611 and 0.6706848862094611",
+      "min_value": 0.6706848862094611,
+      "max_value": 0.6706848862094611,
+      "severity": "warning"
+    },
+    {
+      "column": "recall",
+      "rule_type": "not_null",
+      "description": "Column 'recall' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "recall",
+      "rule_type": "unique",
+      "description": "Column 'recall' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "recall",
+      "rule_type": "range",
+      "description": "Column 'recall' values should be between 0.5883348859492953 and 0.5883348859492953",
+      "min_value": 0.5883348859492953,
+      "max_value": 0.5883348859492953,
+      "severity": "warning"
+    },
+    {
+      "column": "accuracy",
+      "rule_type": "not_null",
+      "description": "Column 'accuracy' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "accuracy",
+      "rule_type": "unique",
+      "description": "Column 'accuracy' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "accuracy",
+      "rule_type": "range",
+      "description": "Column 'accuracy' values should be between 0.7979704526634372 and 0.7979704526634372",
+      "min_value": 0.7979704526634372,
+      "max_value": 0.7979704526634372,
+      "severity": "warning"
+    },
+    {
+      "column": "f1_score",
+      "rule_type": "not_null",
+      "description": "Column 'f1_score' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "f1_score",
+      "rule_type": "unique",
+      "description": "Column 'f1_score' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "f1_score",
+      "rule_type": "range",
+      "description": "Column 'f1_score' values should be between 0.5977163580794566 and 0.5977163580794566",
+      "min_value": 0.5977163580794566,
+      "max_value": 0.5977163580794566,
+      "severity": "warning"
+    },
+    {
+      "column": "log_loss",
+      "rule_type": "not_null",
+      "description": "Column 'log_loss' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "log_loss",
+      "rule_type": "unique",
+      "description": "Column 'log_loss' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "log_loss",
+      "rule_type": "range",
+      "description": "Column 'log_loss' values should be between 1.018343291384798 and 1.018343291384798",
+      "min_value": 1.018343291384798,
+      "max_value": 1.018343291384798,
+      "severity": "warning"
+    },
+    {
+      "column": "roc_auc",
+      "rule_type": "not_null",
+      "description": "Column 'roc_auc' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "roc_auc",
+      "rule_type": "unique",
+      "description": "Column 'roc_auc' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "roc_auc",
+      "rule_type": "range",
+      "description": "Column 'roc_auc' values should be between 0.9388905094905096 and 0.9388905094905096",
+      "min_value": 0.9388905094905096,
+      "max_value": 0.9388905094905096,
+      "severity": "warning"
+    }
+  ]
+}

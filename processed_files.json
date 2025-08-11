@@ -1,0 +1,18 @@
+{
+  "1lrBBC10INgQaxCGE_jJav1DfsMPPgm9C": {
+    "filename": "script_job_142b8bf386034fd1628b2023de212fb7_0.csv",
+    "processed_at": "2025-07-26T15:11:41.492658",
+    "output_folder": "processed_datasets\\script_job_142b8bf386034fd1628b2023de212fb7_0",
+    "row_count": 1,
+    "column_count": 6,
+    "dq_rules_count": 18
+  },
+  "12IxYG2qmPgqav9NSf-hKR8HrLPiCc3eJ": {
+    "filename": "bquxjob_5cbc3452_196eba58105.csv",
+    "processed_at": "2025-07-26T15:11:46.499570",
+    "output_folder": "processed_datasets\\bquxjob_5cbc3452_196eba58105",
+    "row_count": 100,
+    "column_count": 46,
+    "dq_rules_count": 80
+  }
+}

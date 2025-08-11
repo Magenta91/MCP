@@ -1,0 +1,430 @@
+{
+  "filename": "bquxjob_5cbc3452_196eba58105.csv",
+  "row_count": 100,
+  "column_count": 46,
+  "columns": [
+    {
+      "name": "Instrument_Key",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 66
+    },
+    {
+      "name": "Name",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "Trading_Symbol",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "InstrumentType",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1
+    },
+    {
+      "name": "AssetSymbol",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "Instrument",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "TradeDate",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 36
+    },
+    {
+      "name": "TradeHour_IST",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 9.0,
+      "max_value": 9.0,
+      "mean_value": 9.0,
+      "std_value": 0.0
+    },
+    {
+      "name": "TradeMinute",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 40,
+      "min_value": 17.0,
+      "max_value": 59.0,
+      "mean_value": 35.91,
+      "std_value": 11.653321371604706
+    },
+    {
+      "name": "TradingSession",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1
+    },
+    {
+      "name": "Day_Spread",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 56,
+      "min_value": 1.0,
+      "max_value": 51.0,
+      "mean_value": 10.966499999999996,
+      "std_value": 13.26534570665864
+    },
+    {
+      "name": "Hourly_Spread",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 63,
+      "min_value": 0.0,
+      "max_value": 679.0,
+      "mean_value": 217.5934999999996,
+      "std_value": 162.6254394872898
+    },
+    {
+      "name": "DailyGain",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2,
+      "min_value": -0.5,
+      "max_value": 0.5,
+      "mean_value": -0.23,
+      "std_value": 0.4461960433384737
+    },
+    {
+      "name": "HourlyGain",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 52,
+      "min_value": -2.0937214349767985,
+      "max_value": 2.0179372197309418,
+      "mean_value": 0.1054694440828702,
+      "std_value": 0.7426532975585032
+    },
+    {
+      "name": "Timestamp",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 98
+    },
+    {
+      "name": "ist_ts",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 98
+    },
+    {
+      "name": "HourBucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1
+    },
+    {
+      "name": "Open",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 95,
+      "min_value": 10801.0,
+      "max_value": 51440.0,
+      "mean_value": 29062.5365,
+      "std_value": 16663.101701169802
+    },
+    {
+      "name": "High",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 96,
+      "min_value": 10803.5,
+      "max_value": 51440.0,
+      "mean_value": 29068.281000000003,
+      "std_value": 16667.13426815983
+    },
+    {
+      "name": "Low",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 95,
+      "min_value": 10799.5,
+      "max_value": 51406.05,
+      "mean_value": 29057.736500000003,
+      "std_value": 16660.052336712895
+    },
+    {
+      "name": "Close",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 96,
+      "min_value": 10800.0,
+      "max_value": 51416.35,
+      "mean_value": 29062.9005,
+      "std_value": 16663.213961280668
+    },
+    {
+      "name": "Volume_S",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 36,
+      "min_value": 1000.0,
+      "max_value": 21120.0,
+      "mean_value": 2793.8,
+      "std_value": 2962.3515706753697
+    },
+    {
+      "name": "Volume_H",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 66,
+      "min_value": 12330.0,
+      "max_value": 214560.0,
+      "mean_value": 36271.85,
+      "std_value": 29440.435239623836
+    },
+    {
+      "name": "Volume_L",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 10,
+      "min_value": 30.0,
+      "max_value": 1680.0,
+      "mean_value": 108.6,
+      "std_value": 175.28919827046684
+    },
+    {
+      "name": "Volume_D",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 66,
+      "min_value": 134890.0,
+      "max_value": 915480.0,
+      "mean_value": 266533.1,
+      "std_value": 122902.21931690333
+    },
+    {
+      "name": "Value",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 98,
+      "min_value": 1344000.0,
+      "max_value": 236060400.0,
+      "mean_value": 24728929.8675,
+      "std_value": 39082074.2469277
+    },
+    {
+      "name": "Total_Buy_Quantity",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 100,
+      "min_value": 36262000.0,
+      "max_value": 24376177000.0,
+      "mean_value": 11661399280.0,
+      "std_value": 7928545625.298307
+    },
+    {
+      "name": "Total_Sell_Quantity",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 100,
+      "min_value": 36262000.0,
+      "max_value": 24376177000.0,
+      "mean_value": 11661399280.0,
+      "std_value": 7928545625.298307
+    },
+    {
+      "name": "OpenInterest",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 100,
+      "min_value": 362620000.0,
+      "max_value": 243761770000.0,
+      "mean_value": 116613992800.0,
+      "std_value": 79285456252.98308
+    },
+    {
+      "name": "ChangeOI",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 100,
+      "min_value": 11841900.0,
+      "max_value": 221375070000.0,
+      "mean_value": 87307981201.0,
+      "std_value": 61061555194.39545
+    },
+    {
+      "name": "DailyGain_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2
+    },
+    {
+      "name": "HourlyGain_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "Day_Spread_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 5
+    },
+    {
+      "name": "Hour_Spread_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2
+    },
+    {
+      "name": "Volume_D_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2
+    },
+    {
+      "name": "Volume_S_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2
+    },
+    {
+      "name": "Volume_H_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4
+    },
+    {
+      "name": "Volume_L_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 2
+    },
+    {
+      "name": "OI_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1
+    },
+    {
+      "name": "ChangeOI_Bucket",
+      "data_type": "object",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1
+    },
+    {
+      "name": "BuyQty_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 2.44,
+      "std_value": 1.233538066545237
+    },
+    {
+      "name": "SellQty_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 2.44,
+      "std_value": 1.233538066545237
+    },
+    {
+      "name": "Volume_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 1.25,
+      "std_value": 0.6256309946079569
+    },
+    {
+      "name": "OpenInterest_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 2.44,
+      "std_value": 1.233538066545237
+    },
+    {
+      "name": "Spread_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 3.4,
+      "std_value": 1.0249414863810766
+    },
+    {
+      "name": "Gain_bin",
+      "data_type": "int64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 4,
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "mean_value": 2.8,
+      "std_value": 1.063632046956621
+    }
+  ],
+  "summary_stats": {}
+}

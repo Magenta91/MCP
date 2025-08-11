@@ -1,0 +1,74 @@
+{
+  "filename": "script_job_3fa182abd7f058b5ed90058cecf5ecb7_1.csv",
+  "row_count": 1,
+  "column_count": 6,
+  "columns": [
+    {
+      "name": "precision",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.6706848862094611,
+      "max_value": 0.6706848862094611,
+      "mean_value": 0.6706848862094611,
+      "std_value": NaN
+    },
+    {
+      "name": "recall",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.5883348859492953,
+      "max_value": 0.5883348859492953,
+      "mean_value": 0.5883348859492953,
+      "std_value": NaN
+    },
+    {
+      "name": "accuracy",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.7979704526634372,
+      "max_value": 0.7979704526634372,
+      "mean_value": 0.7979704526634372,
+      "std_value": NaN
+    },
+    {
+      "name": "f1_score",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.5977163580794566,
+      "max_value": 0.5977163580794566,
+      "mean_value": 0.5977163580794566,
+      "std_value": NaN
+    },
+    {
+      "name": "log_loss",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 1.018343291384798,
+      "max_value": 1.018343291384798,
+      "mean_value": 1.018343291384798,
+      "std_value": NaN
+    },
+    {
+      "name": "roc_auc",
+      "data_type": "float64",
+      "null_count": 0,
+      "null_percentage": 0.0,
+      "unique_count": 1,
+      "min_value": 0.9388905094905096,
+      "max_value": 0.9388905094905096,
+      "mean_value": 0.9388905094905096,
+      "std_value": NaN
+    }
+  ],
+  "summary_stats": {}
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "dataset-onboarding": {
+      "command": "python",
+      "args": ["mcp_server.py"],
+      "cwd": ".",
+      "env": {
+        "GOOGLE_SERVICE_ACCOUNT_KEY_PATH": "mcp1-467108-702d9a41627c.json",
+        "MCP_SERVER_FOLDER_ID": "1roPPn6-sQHKyQDw8rVkmnlTyao3KZSBQ",
+        "MCP_CLIENT_FOLDER_ID": "1lJ5OKMqbSKuz_7aAAjcWSKyxPb-yMvXP"
+      }
+    }
+  }
+}

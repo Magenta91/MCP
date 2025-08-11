@@ -1,0 +1,822 @@
+{
+  "dataset_info": {
+    "filename": "bquxjob_5cbc3452_196eba58105.csv",
+    "row_count": 100,
+    "column_count": 46
+  },
+  "data_quality_summary": {
+    "total_rules": 80,
+    "error_rules": 46,
+    "warning_rules": 34
+  },
+  "column_quality": [
+    {
+      "column_name": "Instrument_Key",
+      "completeness": 100.0,
+      "uniqueness": 66.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Name",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Trading_Symbol",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "InstrumentType",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "AssetSymbol",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Instrument",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "TradeDate",
+      "completeness": 100.0,
+      "uniqueness": 36.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "TradeHour_IST",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "TradeMinute",
+      "completeness": 100.0,
+      "uniqueness": 40.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "TradingSession",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Day_Spread",
+      "completeness": 100.0,
+      "uniqueness": 56.00000000000001,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Hourly_Spread",
+      "completeness": 100.0,
+      "uniqueness": 63.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "DailyGain",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "HourlyGain",
+      "completeness": 100.0,
+      "uniqueness": 52.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Timestamp",
+      "completeness": 100.0,
+      "uniqueness": 98.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "ist_ts",
+      "completeness": 100.0,
+      "uniqueness": 98.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "HourBucket",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Open",
+      "completeness": 100.0,
+      "uniqueness": 95.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "High",
+      "completeness": 100.0,
+      "uniqueness": 96.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Low",
+      "completeness": 100.0,
+      "uniqueness": 95.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Close",
+      "completeness": 100.0,
+      "uniqueness": 96.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Volume_S",
+      "completeness": 100.0,
+      "uniqueness": 36.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Volume_H",
+      "completeness": 100.0,
+      "uniqueness": 66.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Volume_L",
+      "completeness": 100.0,
+      "uniqueness": 10.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Volume_D",
+      "completeness": 100.0,
+      "uniqueness": 66.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Value",
+      "completeness": 100.0,
+      "uniqueness": 98.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Total_Buy_Quantity",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "Total_Sell_Quantity",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "OpenInterest",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "ChangeOI",
+      "completeness": 100.0,
+      "uniqueness": 100.0,
+      "data_type": "float64"
+    },
+    {
+      "column_name": "DailyGain_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "HourlyGain_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Day_Spread_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 5.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Hour_Spread_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Volume_D_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Volume_S_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Volume_H_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "Volume_L_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 2.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "OI_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "ChangeOI_Bucket",
+      "completeness": 100.0,
+      "uniqueness": 1.0,
+      "data_type": "object"
+    },
+    {
+      "column_name": "BuyQty_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "SellQty_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Volume_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "OpenInterest_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Spread_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    },
+    {
+      "column_name": "Gain_bin",
+      "completeness": 100.0,
+      "uniqueness": 4.0,
+      "data_type": "int64"
+    }
+  ],
+  "suggested_rules": [
+    {
+      "column": "Instrument_Key",
+      "rule_type": "not_null",
+      "description": "Column 'Instrument_Key' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Name",
+      "rule_type": "not_null",
+      "description": "Column 'Name' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Trading_Symbol",
+      "rule_type": "not_null",
+      "description": "Column 'Trading_Symbol' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "InstrumentType",
+      "rule_type": "not_null",
+      "description": "Column 'InstrumentType' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "AssetSymbol",
+      "rule_type": "not_null",
+      "description": "Column 'AssetSymbol' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Instrument",
+      "rule_type": "not_null",
+      "description": "Column 'Instrument' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "TradeDate",
+      "rule_type": "not_null",
+      "description": "Column 'TradeDate' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "TradeHour_IST",
+      "rule_type": "not_null",
+      "description": "Column 'TradeHour_IST' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "TradeHour_IST",
+      "rule_type": "range",
+      "description": "Column 'TradeHour_IST' values should be between 9.0 and 9.0",
+      "min_value": 9.0,
+      "max_value": 9.0,
+      "severity": "warning"
+    },
+    {
+      "column": "TradeMinute",
+      "rule_type": "not_null",
+      "description": "Column 'TradeMinute' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "TradeMinute",
+      "rule_type": "range",
+      "description": "Column 'TradeMinute' values should be between 17.0 and 59.0",
+      "min_value": 17.0,
+      "max_value": 59.0,
+      "severity": "warning"
+    },
+    {
+      "column": "TradingSession",
+      "rule_type": "not_null",
+      "description": "Column 'TradingSession' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Day_Spread",
+      "rule_type": "not_null",
+      "description": "Column 'Day_Spread' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Day_Spread",
+      "rule_type": "range",
+      "description": "Column 'Day_Spread' values should be between 1.0 and 51.0",
+      "min_value": 1.0,
+      "max_value": 51.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Hourly_Spread",
+      "rule_type": "not_null",
+      "description": "Column 'Hourly_Spread' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Hourly_Spread",
+      "rule_type": "range",
+      "description": "Column 'Hourly_Spread' values should be between 0.0 and 679.0",
+      "min_value": 0.0,
+      "max_value": 679.0,
+      "severity": "warning"
+    },
+    {
+      "column": "DailyGain",
+      "rule_type": "not_null",
+      "description": "Column 'DailyGain' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "DailyGain",
+      "rule_type": "range",
+      "description": "Column 'DailyGain' values should be between -0.5 and 0.5",
+      "min_value": -0.5,
+      "max_value": 0.5,
+      "severity": "warning"
+    },
+    {
+      "column": "HourlyGain",
+      "rule_type": "not_null",
+      "description": "Column 'HourlyGain' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "HourlyGain",
+      "rule_type": "range",
+      "description": "Column 'HourlyGain' values should be between -2.0937214349767985 and 2.0179372197309418",
+      "min_value": -2.0937214349767985,
+      "max_value": 2.0179372197309418,
+      "severity": "warning"
+    },
+    {
+      "column": "Timestamp",
+      "rule_type": "not_null",
+      "description": "Column 'Timestamp' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Timestamp",
+      "rule_type": "unique",
+      "description": "Column 'Timestamp' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "ist_ts",
+      "rule_type": "not_null",
+      "description": "Column 'ist_ts' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "ist_ts",
+      "rule_type": "unique",
+      "description": "Column 'ist_ts' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "HourBucket",
+      "rule_type": "not_null",
+      "description": "Column 'HourBucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Open",
+      "rule_type": "not_null",
+      "description": "Column 'Open' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Open",
+      "rule_type": "range",
+      "description": "Column 'Open' values should be between 10801.0 and 51440.0",
+      "min_value": 10801.0,
+      "max_value": 51440.0,
+      "severity": "warning"
+    },
+    {
+      "column": "High",
+      "rule_type": "not_null",
+      "description": "Column 'High' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "High",
+      "rule_type": "unique",
+      "description": "Column 'High' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "High",
+      "rule_type": "range",
+      "description": "Column 'High' values should be between 10803.5 and 51440.0",
+      "min_value": 10803.5,
+      "max_value": 51440.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Low",
+      "rule_type": "not_null",
+      "description": "Column 'Low' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Low",
+      "rule_type": "range",
+      "description": "Column 'Low' values should be between 10799.5 and 51406.05",
+      "min_value": 10799.5,
+      "max_value": 51406.05,
+      "severity": "warning"
+    },
+    {
+      "column": "Close",
+      "rule_type": "not_null",
+      "description": "Column 'Close' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Close",
+      "rule_type": "unique",
+      "description": "Column 'Close' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "Close",
+      "rule_type": "range",
+      "description": "Column 'Close' values should be between 10800.0 and 51416.35",
+      "min_value": 10800.0,
+      "max_value": 51416.35,
+      "severity": "warning"
+    },
+    {
+      "column": "Volume_S",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_S' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_S",
+      "rule_type": "range",
+      "description": "Column 'Volume_S' values should be between 1000.0 and 21120.0",
+      "min_value": 1000.0,
+      "max_value": 21120.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Volume_H",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_H' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_H",
+      "rule_type": "range",
+      "description": "Column 'Volume_H' values should be between 12330.0 and 214560.0",
+      "min_value": 12330.0,
+      "max_value": 214560.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Volume_L",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_L' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_L",
+      "rule_type": "range",
+      "description": "Column 'Volume_L' values should be between 30.0 and 1680.0",
+      "min_value": 30.0,
+      "max_value": 1680.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Volume_D",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_D' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_D",
+      "rule_type": "range",
+      "description": "Column 'Volume_D' values should be between 134890.0 and 915480.0",
+      "min_value": 134890.0,
+      "max_value": 915480.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Value",
+      "rule_type": "not_null",
+      "description": "Column 'Value' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Value",
+      "rule_type": "unique",
+      "description": "Column 'Value' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "Value",
+      "rule_type": "range",
+      "description": "Column 'Value' values should be between 1344000.0 and 236060400.0",
+      "min_value": 1344000.0,
+      "max_value": 236060400.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Total_Buy_Quantity",
+      "rule_type": "not_null",
+      "description": "Column 'Total_Buy_Quantity' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Total_Buy_Quantity",
+      "rule_type": "unique",
+      "description": "Column 'Total_Buy_Quantity' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "Total_Buy_Quantity",
+      "rule_type": "range",
+      "description": "Column 'Total_Buy_Quantity' values should be between 36262000.0 and 24376177000.0",
+      "min_value": 36262000.0,
+      "max_value": 24376177000.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Total_Sell_Quantity",
+      "rule_type": "not_null",
+      "description": "Column 'Total_Sell_Quantity' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Total_Sell_Quantity",
+      "rule_type": "unique",
+      "description": "Column 'Total_Sell_Quantity' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "Total_Sell_Quantity",
+      "rule_type": "range",
+      "description": "Column 'Total_Sell_Quantity' values should be between 36262000.0 and 24376177000.0",
+      "min_value": 36262000.0,
+      "max_value": 24376177000.0,
+      "severity": "warning"
+    },
+    {
+      "column": "OpenInterest",
+      "rule_type": "not_null",
+      "description": "Column 'OpenInterest' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "OpenInterest",
+      "rule_type": "unique",
+      "description": "Column 'OpenInterest' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "OpenInterest",
+      "rule_type": "range",
+      "description": "Column 'OpenInterest' values should be between 362620000.0 and 243761770000.0",
+      "min_value": 362620000.0,
+      "max_value": 243761770000.0,
+      "severity": "warning"
+    },
+    {
+      "column": "ChangeOI",
+      "rule_type": "not_null",
+      "description": "Column 'ChangeOI' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "ChangeOI",
+      "rule_type": "unique",
+      "description": "Column 'ChangeOI' should contain unique values",
+      "severity": "warning"
+    },
+    {
+      "column": "ChangeOI",
+      "rule_type": "range",
+      "description": "Column 'ChangeOI' values should be between 11841900.0 and 221375070000.0",
+      "min_value": 11841900.0,
+      "max_value": 221375070000.0,
+      "severity": "warning"
+    },
+    {
+      "column": "DailyGain_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'DailyGain_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "HourlyGain_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'HourlyGain_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Day_Spread_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Day_Spread_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Hour_Spread_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Hour_Spread_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_D_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_D_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_S_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_S_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_H_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_H_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_L_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_L_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "OI_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'OI_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "ChangeOI_Bucket",
+      "rule_type": "not_null",
+      "description": "Column 'ChangeOI_Bucket' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "BuyQty_bin",
+      "rule_type": "not_null",
+      "description": "Column 'BuyQty_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "BuyQty_bin",
+      "rule_type": "range",
+      "description": "Column 'BuyQty_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    },
+    {
+      "column": "SellQty_bin",
+      "rule_type": "not_null",
+      "description": "Column 'SellQty_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "SellQty_bin",
+      "rule_type": "range",
+      "description": "Column 'SellQty_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Volume_bin",
+      "rule_type": "not_null",
+      "description": "Column 'Volume_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Volume_bin",
+      "rule_type": "range",
+      "description": "Column 'Volume_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    },
+    {
+      "column": "OpenInterest_bin",
+      "rule_type": "not_null",
+      "description": "Column 'OpenInterest_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "OpenInterest_bin",
+      "rule_type": "range",
+      "description": "Column 'OpenInterest_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Spread_bin",
+      "rule_type": "not_null",
+      "description": "Column 'Spread_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Spread_bin",
+      "rule_type": "range",
+      "description": "Column 'Spread_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    },
+    {
+      "column": "Gain_bin",
+      "rule_type": "not_null",
+      "description": "Column 'Gain_bin' should not contain null values",
+      "severity": "error"
+    },
+    {
+      "column": "Gain_bin",
+      "rule_type": "range",
+      "description": "Column 'Gain_bin' values should be between 1.0 and 4.0",
+      "min_value": 1.0,
+      "max_value": 4.0,
+      "severity": "warning"
+    }
+  ]
+}
